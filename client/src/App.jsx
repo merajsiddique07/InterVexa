@@ -23,7 +23,7 @@ const App = () => {
       }
     };
     getUser();
-  }, []);
+  }, [dispatch]);
   return (
     <div>
       <Routes>
