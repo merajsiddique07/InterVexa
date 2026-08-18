@@ -20,6 +20,7 @@ import evalImg from "../assets/ai-ans.png";
 import resumeImg from "../assets/resume.png";
 import pdfImg from "../assets/pdf.png";
 import analyticsImg from "../assets/history.png";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const { userData } = useSelector((state) => state.user);
@@ -67,7 +68,7 @@ const Home = () => {
                     setshowAuth(true);
                     return;
                   }
-                  navigate("/inteview");
+                  navigate("/interview");
                 }}
                 whileHover={{ opacity: 0.9, scale: 1.03 }}
                 whileTap={{ opacity: 1, scale: 0.98 }}
@@ -271,6 +272,7 @@ const Home = () => {
         </div>
       </div>
       {showAuth && <AuthModel onClose={() => setshowAuth(false)} />}
+      <Footer />
     </div>
   );
 };
