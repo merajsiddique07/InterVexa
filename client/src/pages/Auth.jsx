@@ -8,9 +8,11 @@ import axios from "axios";
 import { ServerUrl } from "../App";
 import { useDispatch } from "react-redux";
 import { setUserData } from "../redux/user.Slice";
+import { useNavigate } from "react-router-dom";
 
 const Auth = ({ isModel = false }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleGoogleAuth = async () => {
     try {
       const response = await signInWithPopup(auth, provider);
@@ -23,6 +25,7 @@ const Auth = ({ isModel = false }) => {
         { withCredentials: true },
       );
       dispatch(setUserData(result.data));
+      navigate("/");
     } catch (error) {
       console.log(error);
       dispatch(setUserData(null));
