@@ -5,6 +5,8 @@ import {
   analyzeResume,
   finishInterview,
   generateQuestion,
+  getInterviewReport,
+  getMyInterviews,
   submitAnswer,
 } from "../controllers/interview.controller.js";
 const interviewRouter = express.Router();
@@ -16,5 +18,7 @@ interviewRouter.post("/generate-questions", isAuth, generateQuestion);
 interviewRouter.post("/submit-answer", isAuth, submitAnswer);
 
 interviewRouter.post("/finish", isAuth, finishInterview);
+interviewRouter.post("/get-interview", isAuth, getMyInterviews);
+interviewRouter.post("/report/:id", isAuth, getInterviewReport);
 
 export default interviewRouter;
