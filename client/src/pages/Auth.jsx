@@ -26,6 +26,7 @@ const Auth = ({ isModel = false }) => {
       );
       dispatch(setUserData(result.data));
       navigate("/");
+      window.location.href = "/";
     } catch (error) {
       console.log(error);
       dispatch(setUserData(null));

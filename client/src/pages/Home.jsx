@@ -193,8 +193,8 @@ const Home = () => {
                         className="w-full h-auto object-contain max-h-64"
                       />
                     </div>
-                    <div className="w-full md:w-1/2">
-                      <div className="bg-green-50 text-green-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                    <div className="w-full md:w-1/2 pl-5 pb-2">
+                      <div className="bg-green-50 text-green-600 w-12 h-12 rounded-xl flex items-center justify-center mb-6 ">
                         {item.icon}
                       </div>
                       <h3 className="font-semibold mb-3 text-xl">
